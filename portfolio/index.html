@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR NDUBUISI DESMOND OKOYE - Developer Portfolio</title>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#0D1117',
+                        'secondary': '#161B22',
+                        'accent': '#58A6FF',
+                        'text-light': '#C9D1D9',
+                        'text-dark': '#8B949E',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0D1117;
+            color: #C9D1D9;
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(88, 166, 255, 0.1), 0 4px 6px -2px rgba(88, 166, 255, 0.05);
+        }
+        .bg-pattern {
+            background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-primary text-text-light">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-secondary bg-opacity-90 backdrop-blur-sm z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-accent tracking-wider rounded-md transition duration-300 hover:text-white">Your Name</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-text-light hover:text-white transition duration-300 font-semibold">About</a>
+                <a href="#skills" class="text-text-light hover:text-white transition duration-300 font-semibold">Skills</a>
+                <a href="#projects" class="text-text-light hover:text-white transition duration-300 font-semibold">Projects</a>
+                <a href="#contact" class="text-text-light hover:text-white transition duration-300 font-semibold">Contact</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-text-light hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary w-full">
+            <div class="flex flex-col p-4 space-y-2 text-center">
+                <a href="#about" class="py-2 hover:bg-primary rounded-md transition duration-300 font-semibold">About</a>
+                <a href="#skills" class="py-2 hover:bg-primary rounded-md transition duration-300 font-semibold">Skills</a>
+                <a href="#projects" class="py-2 hover:bg-primary rounded-md transition duration-300 font-semibold">Projects</a>
+                <a href="#contact" class="py-2 hover:bg-primary rounded-md transition duration-300 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="section bg-pattern bg-primary text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white mb-4">
+                Hi, I'm <span class="text-accent">Your Name</span>.
+            </h1>
+            <p class="text-xl md:text-2xl text-text-dark max-w-2xl mx-auto mb-8">
+                A passionate software developer specializing in creating seamless digital experiences.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#projects" class="inline-block bg-accent text-primary px-8 py-3 rounded-full font-bold shadow-lg transform hover:scale-105 transition duration-300">
+                    View My Work
+                </a>
+                <a href="#contact" class="inline-block border-2 border-accent text-accent px-8 py-3 rounded-full font-bold transform hover:bg-accent hover:text-primary transition duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-secondary">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12 max-w-4xl">
+            <div class="w-full md:w-1/3">
+                <img src="https://placehold.co/400x400/161B22/58A6FF?text=Profile" alt="Your Profile" class="w-full h-auto rounded-full border-4 border-accent shadow-lg object-cover">
+            </div>
+            <div class="w-full md:w-2/3 text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-4 text-white">About Me</h2>
+                <p class="text-lg text-text-dark leading-relaxed">
+                    I'm a software developer with a strong foundation in both front-end and back-end technologies. My passion lies in building scalable and performant applications that solve real-world problems. With a keen eye for detail and a love for clean code, I strive to create intuitive and engaging user interfaces. I am always eager to learn new technologies and collaborate with a team to build innovative solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-primary">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">My Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+                <!-- Skill Item 1 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/303229/html-5-logo.svg" alt="HTML5" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">HTML5</h3>
+                </div>
+                <!-- Skill Item 2 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/303254/css-3-logo.svg" alt="CSS3" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">CSS3</h3>
+                </div>
+                <!-- Skill Item 3 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/349419/javascript.svg" alt="JavaScript" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">JavaScript</h3>
+                </div>
+                <!-- Skill Item 4 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/452093/react.svg" alt="React" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">React</h3>
+                </div>
+                <!-- Skill Item 5 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/374112/node.svg" alt="Node.js" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Node.js</h3>
+                </div>
+                <!-- Skill Item 6 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/373977/database.svg" alt="SQL/NoSQL" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">SQL/NoSQL</h3>
+                </div>
+                <!-- Skill Item 7 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/303328/git-logo.svg" alt="Git" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Git</h3>
+                </div>
+                <!-- Skill Item 8 -->
+                <div class="p-6 bg-secondary rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://www.svgrepo.com/show/374026/python.svg" alt="Python" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-semibold">Python</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-secondary">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-primary p-6 rounded-xl shadow-lg">
+                    <img src="https://placehold.co/600x400/1E293B/E2E8F0?text=Project+1" alt="Project 1" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Project Title One</h3>
+                    <p class="text-text-dark mb-4">
+                        A brief description of your project. Mention the key technologies used and the problem it solves.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-accent text-primary px-4 py-2 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-300">Live Demo</a>
+                        <a href="#" class="inline-block border-2 border-accent text-accent px-4 py-2 rounded-full font-semibold text-sm hover:bg-accent hover:text-primary transition-colors duration-300">GitHub Repo</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card bg-primary p-6 rounded-xl shadow-lg">
+                    <img src="https://placehold.co/600x400/1E293B/E2E8F0?text=Project+2" alt="Project 2" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Project Title Two</h3>
+                    <p class="text-text-dark mb-4">
+                        A brief description of your project. Mention the key technologies used and the problem it solves.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-accent text-primary px-4 py-2 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-300">Live Demo</a>
+                        <a href="#" class="inline-block border-2 border-accent text-accent px-4 py-2 rounded-full font-semibold text-sm hover:bg-accent hover:text-primary transition-colors duration-300">GitHub Repo</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card bg-primary p-6 rounded-xl shadow-lg">
+                    <img src="https://placehold.co/600x400/1E293B/E2E8F0?text=Project+3" alt="Project 3" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Project Title Three</h3>
+                    <p class="text-text-dark mb-4">
+                        A brief description of your project. Mention the key technologies used and the problem it solves.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="inline-block bg-accent text-primary px-4 py-2 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-300">Live Demo</a>
+                        <a href="#" class="inline-block border-2 border-accent text-accent px-4 py-2 rounded-full font-semibold text-sm hover:bg-accent hover:text-primary transition-colors duration-300">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-primary">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-4 text-white">Get In Touch</h2>
+            <p class="text-lg text-text-dark mb-8">
+                I'm currently open to new opportunities. Feel free to contact me for collaborations or just to say hi!
+            </p>
+            <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-8 justify-center items-center mb-8">
+                <a href="mailto:your.email@example.com" class="bg-secondary text-text-light px-6 py-3 rounded-full flex items-center space-x-2 hover:bg-accent hover:text-primary transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    <span>your.email@example.com</span>
+                </a>
+                <a href="https://github.com/your-profile" target="_blank" class="bg-secondary text-text-light px-6 py-3 rounded-full flex items-center space-x-2 hover:bg-accent hover:text-primary transition-colors duration-300">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 0a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.6.07-.6.07-.6 1.0.07 1.53 1.03 1.53 1.03.88 1.5 2.31 1.07 2.87.82.09-.65.34-1.07.62-1.3-.22-.2-2.12-.88-2.12-4.75 0-1.05.37-1.92 1.03-2.6-.1-.23-.45-1.23.1-2.58 0 0 .84-.26 2.75 1.0C7.62 5.6 8.5 5.5 9.4 5.5s1.78.1 2.58.28c1.91-1.26 2.75-1.0 2.75-1.0.55 1.35.2 2.35.1 2.58.66.68 1.03 1.55 1.03 2.6 0 3.88-1.9 4.55-3.13 4.75.35.3.67.92.67 1.86l-.01 2.72c0 .26.18.57.68.48A10 10 0 0010 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+            <div class="text-center text-text-dark text-sm mt-12">
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

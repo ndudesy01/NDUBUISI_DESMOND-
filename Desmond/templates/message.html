@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Message</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2 class="{{ 'success' if success else 'error' }}">{{ message }}</h2>
+    <a href="{{ link or url_for('login') }}"><button>OK</button></a>
+  </div>
+</body>
+</html>
